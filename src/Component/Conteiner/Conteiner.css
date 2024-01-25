@@ -1,0 +1,6 @@
+.conteiner {
+  width: 85rem;
+  height: 67.5rem;
+  flex-shrink: 0;
+  background: #fafafa;
+}

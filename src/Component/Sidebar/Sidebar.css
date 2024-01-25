@@ -1,0 +1,75 @@
+.sidebar {
+  display: flex;
+  width: 5rem;
+  padding: 1.25rem 0rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-right: 1px solid #ebecf2;
+  background: #f7f8fa;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16rem;
+  align-self: stretch;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+
+.thame {
+  display: flex;
+  flex-direction: column;
+  width: 5rem;
+  padding: 0rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.thame-2 {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 6.25rem;
+  background: #fff;
+}
+
+.frame-thame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.b-frame {
+  display: flex;
+  width: 1.275rem;
+  padding: 0.41019rem 0.46875rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.58594rem;
+  border-radius: 5.875rem;
+  background: #34caa5;
+}
+
+.other-menu {
+  display: flex;
+  width: 5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
