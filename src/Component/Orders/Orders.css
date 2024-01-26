@@ -137,3 +137,19 @@
   align-items: center;
   gap: 0.375rem;
 }
+
+@media screen and (max-width: 768px) {
+  .orders {
+    width: 15rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .orders::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .orders::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}

@@ -1,6 +1,33 @@
 .conteiner {
-  width: 85rem;
-  height: 67.5rem;
-  flex-shrink: 0;
+  width: 1955px;
+  height: 1080px;
   background: #fafafa;
+}
+
+.leri {
+  display: flex;
+  height: 400px;
+}
+
+.l-leri {
+  flex: 1;
+}
+
+.r-leri {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .conteiner {
+    width: auto;
+    height: 300vh;
+  }
+  .leri {
+    flex-direction: column;
+  }
+
+  .r-leri {
+    display: flex;
+    flex-direction: column;
+  }
 }

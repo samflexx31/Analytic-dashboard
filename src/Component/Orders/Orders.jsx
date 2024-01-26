@@ -6,12 +6,22 @@ import corey from "../../images/corey.png";
 import cooper from "../../images/cooper.png";
 import lubin from "../../images/lubin.png";
 import doc from "../../images/document-download.svg";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const Orders = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="orders">
+    <div
+      className="orders"
+      style={{
+        background: darkMode && "#2d3748",
+        color: darkMode && "white",
+      }}
+    >
       <div className="orders-title">
-        <p>Last Orders</p>
+        <p style={{ color: darkMode && "white" }}>Last Orders</p>
         <p>See All</p>
       </div>
       <div className="orders-header">
@@ -28,7 +38,7 @@ const Orders = () => {
             <div className="orders-prof">
               <div className="orders-text">
                 <img src={bergson} alt="" />
-                <p style={{ color: "#3A3F51" }}>Marcus Bergson</p>
+                <p style={{ color: darkMode && "white" }}>Marcus Bergson</p>
               </div>
             </div>
             <p
@@ -50,7 +60,7 @@ const Orders = () => {
             <div className="orders-prof">
               <div className="orders-text">
                 <img src={Jaydon} alt="" />
-                <p style={{ color: "#3A3F51" }}>Jaydon Vaccaro</p>
+                <p style={{ color: darkMode && "white" }}>Jaydon Vaccaro</p>
               </div>
             </div>
             <p
@@ -72,7 +82,7 @@ const Orders = () => {
             <div className="orders-prof">
               <div className="orders-text">
                 <img src={corey} alt="" />
-                <p style={{ color: "#3A3F51" }}>Corey Schleifer</p>
+                <p style={{ color: darkMode && "white" }}>Corey Schleifer</p>
               </div>
             </div>
             <p
@@ -94,7 +104,7 @@ const Orders = () => {
             <div className="orders-prof">
               <div className="orders-text">
                 <img src={cooper} alt="" />
-                <p style={{ color: "#3A3F51" }}>cooper Press</p>
+                <p style={{ color: darkMode && "white" }}>cooper Press</p>
               </div>
             </div>
             <p
@@ -116,7 +126,7 @@ const Orders = () => {
             <div className="orders-prof">
               <div className="orders-text">
                 <img src={lubin} alt="" />
-                <p style={{ color: "#3A3F51" }}>Phillip Lubin</p>
+                <p style={{ color: darkMode && "white" }}>Phillip Lubin</p>
               </div>
             </div>
             <p

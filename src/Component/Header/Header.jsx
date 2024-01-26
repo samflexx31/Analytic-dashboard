@@ -5,17 +5,40 @@ import Calender from "../../images/solar_calendar-linear.svg";
 import Bell from "../../images/solar_bell-outline.svg";
 import arrow from "../../images/Arrow - Down 2.svg";
 import Myp from "../../images/myp.jpg";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const Header = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="header">
+    <div
+      className="header"
+      style={{
+        background: darkMode ? "#2d3748" : "",
+        color: darkMode ? "white" : "",
+      }}
+    >
       <div className="searchIcon">
         <div className="dash">
-          <p>Dashboard</p>
+          <p style={{ color: darkMode && "white" }}>Dashboard</p>
           <div className="input-search">
-            <div className="input-c">
+            <div
+              className="input-c"
+              style={{
+                background: darkMode && "black",
+                color: darkMode && "white",
+              }}
+            >
               <img src={Search} alt="" />
-              <p>Search...</p>
+              <input
+                type="text"
+                placeholder="search..."
+                style={{
+                  background: darkMode && "black",
+                  color: darkMode && "white",
+                }}
+              />
             </div>
           </div>
         </div>
@@ -23,7 +46,7 @@ const Header = () => {
           <div className="profile-d">
             <div className="inner-profile-d">
               <img src={Calender} />
-              <p>January 27, 2024</p>
+              <p style={{ color: darkMode && "white" }}>January 27, 2024</p>
             </div>
             <div className="profile-icon">
               <img src={Bell} alt="" />
@@ -35,8 +58,8 @@ const Header = () => {
                 <img src={Myp} alt="" />
               </div>
               <div className="nameMail">
-                <p>Ola Tunji</p>
-                <p>samflex@gmail.com</p>
+                <p style={{ color: darkMode && "white" }}>Ola Tunji</p>
+                <p style={{ color: darkMode && "white" }}>samflex@gmail.com</p>
               </div>
             </div>
             <img src={arrow} />

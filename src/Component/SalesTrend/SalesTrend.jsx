@@ -1,42 +1,45 @@
 import React from "react";
 import "./SalesTrend.css";
 import Arrow from "../../images/Arrow - Down 2.svg";
-import bar1 from "../../images/bar.png";
-import bar2 from "../../images/bar2.png";
-import bar3 from "../../images/bar3.png";
-import bar4 from "../../images/bar4.png";
-import bar5 from "../../images/bar5.png";
-import bar6 from "../../images/bar6.png";
-import bar7 from "../../images/bar7.png";
-import bar8 from "../../images/bar8.png";
-import bar9 from "../../images/bar9.png";
-import bar10 from "../../images/bar10.png";
-import bar11 from "../../images/bar11.png";
-import bar12 from "../../images/bar12.png";
+import bar from "../../images/mainbar.png";
+import shape from "../../images/Combined Shape.svg";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const SalesTrend = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="sales">
+    <div
+      className="sales"
+      style={{
+        background: darkMode && "#2d3748",
+        color: darkMode && "white",
+      }}
+    >
       <div className="title">
-        <p>Sales Trends</p>
+        <p style={{ color: darkMode && "white" }}>Sales Trends</p>
         <div className="title-date">
-          <p>Sort by:</p>
-          <div className="date-filter">
+          <p style={{ color: darkMode && "white" }}>Sort by:</p>
+          <div
+            className="date-filter"
+            style={{ background: darkMode && "#2d3748" }}
+          >
             <div className="date-c">
-              <p>Weekly</p>
+              <p style={{ color: darkMode && "white" }}>Weekly</p>
               <img src={Arrow} alt="" />
             </div>
           </div>
         </div>
       </div>
       <div className="sales-amount">
-        <p>50.000</p>
-        <p>40.000</p>
-        <p>30.000</p>
-        <p>20.000</p>
-        <p>10.000</p>
-        <p>5.000</p>
-        <p>0.000</p>
+        <p style={{ color: darkMode && "white" }}>50.000</p>
+        <p style={{ color: darkMode && "white" }}>40.000</p>
+        <p style={{ color: darkMode && "white" }}>30.000</p>
+        <p style={{ color: darkMode && "white" }}>20.000</p>
+        <p style={{ color: darkMode && "white" }}>10.000</p>
+        <p style={{ color: darkMode && "white" }}>5.000</p>
+        <p style={{ color: darkMode && "white" }}>0.000</p>
       </div>
       <div className="sales-line">
         <div className="dotted-line" />
@@ -51,32 +54,27 @@ const SalesTrend = () => {
         <div className="dotted-line" />
       </div>
       <div className="sales-month">
-        <p>Jan</p>
-        <p>Feb</p>
-        <p>Mar</p>
-        <p>Apr</p>
-        <p>May</p>
-        <p>Jun</p>
-        <p>Jul</p>
-        <p>Aug</p>
-        <p>Sep</p>
-        <p>Oct</p>
-        <p>Nov</p>
-        <p>Dec</p>
+        <p style={{ color: darkMode && "white" }}>Jan</p>
+        <p style={{ color: darkMode && "white" }}>Feb</p>
+        <p style={{ color: darkMode && "white" }}>Apr</p>
+        <p style={{ color: darkMode && "white" }}>May</p>
+        <p style={{ color: darkMode && "white" }}>Jun</p>
+        <p style={{ color: darkMode && "white" }}>Mar</p>
+        <p style={{ color: darkMode && "white" }}>Jul</p>
+        <p style={{ color: darkMode && "white" }}>Aug</p>
+        <p style={{ color: darkMode && "white" }}>Sep</p>
+        <p style={{ color: darkMode && "white" }}>Oct</p>
+        <p style={{ color: darkMode && "white" }}>Nov</p>
+        <p style={{ color: darkMode && "white" }}>Dec</p>
       </div>
-      <div className="bar">
-        <img src={bar1} alt="" />
-        <img src={bar2} alt="" />
-        <img src={bar3} alt="" />
-        <img src={bar4} alt="" />
-        <img src={bar5} alt="" />
-        <img src={bar6} alt="" />
-        <img src={bar7} alt="" />
-        <img src={bar8} alt="" />
-        <img src={bar9} alt="" />
-        <img src={bar10} alt="" />
-        <img src={bar11} alt="" />
-        <img src={bar12} alt="" />
+      <div className="barr">
+        <img src={bar} alt="" />
+      </div>
+      <div className="top-sale">
+        <div className="shape">
+          <img src={shape} style={{ width: "75px" }} />
+          <p>$45,000</p>
+        </div>
       </div>
     </div>
   );

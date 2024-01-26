@@ -96,7 +96,7 @@
   align-items: flex-start;
   gap: 30px;
   opacity: 0.56;
-  margin-left: 6.5rem;
+  margin-left: 7.8rem;
 }
 
 .sales-month p {
@@ -106,7 +106,6 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 157.143% */
 }
 
 .sales-amount {
@@ -121,23 +120,67 @@
 }
 
 .sales-amount p {
-  display: inline; /* or use inline-block */
+  display: inline;
   margin: 0;
   color: var(--Neutral-600, #525252);
-  /* Body Text/Plus Jakarta Sans/SemiBold/12 */
   font-family: "Plus Jakarta Sans";
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
-  line-height: 20px; /* 133.333% */
+  line-height: 20px;
+  opacity: 50%;
 }
 
-.bar {
+.barr {
   display: flex;
   width: 599px;
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  top: 14.6rem;
+  top: 15.2rem;
   left: 14rem;
+}
+
+.barr img {
+  width: 627px;
+}
+
+.top-sales {
+  position: absolute;
+}
+.shape {
+  position: relative;
+  bottom: 17rem;
+  left: 23rem;
+}
+
+.shape p {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 0.8rem;
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .sales {
+    width: 15rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .barr {
+    display: none;
+  }
+  .sales::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .sales::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 }

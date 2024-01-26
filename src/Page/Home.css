@@ -1,4 +1,12 @@
 .home {
   display: flex;
-  width: 90rem;
+  width: 1440px;
+  height: 110vh;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    width: auto;
+    height: auto;
+  }
 }

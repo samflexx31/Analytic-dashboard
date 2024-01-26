@@ -1,7 +1,6 @@
 .sidebar {
   display: flex;
   width: 5rem;
-  padding: 1.25rem 0rem;
   flex-direction: column;
   align-items: center;
   gap: 0.625rem;
@@ -16,14 +15,38 @@
   align-items: center;
   gap: 16rem;
   align-self: stretch;
+  padding: 1.3rem 0rem;
 }
 
 .main-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.79rem;
   align-self: stretch;
+}
+
+.cate {
+  display: flex;
+  height: 40px;
+  padding: 9px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.lineImg {
+  margin-top: 2.5rem;
+}
+
+.cate-img {
+  display: flex;
+  height: 40px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 20px;
 }
 
 .thame {
@@ -72,4 +95,24 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+/* Dark Mode Styles */
+.sidebar.dark-mode {
+  background: #2d3748;
+  border-right: 1px solid #2d3748;
+}
+
+.main-menu.dark-mode {
+  background: #2d3748;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 4rem;
+  }
+
+  .thame-2 {
+    width: 2rem;
+  }
 }
